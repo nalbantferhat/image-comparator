@@ -40,7 +40,7 @@ To install the library, run:
 ```php
 use SapientPro\ImageComparator\ImageComparator;
 
-$imageComparator = new ImageComparator()
+$imageComparator = new ImageComparator();
 ```
 
 After creating an instance you can use one of the methods available:
@@ -70,7 +70,7 @@ Now, let's compare them:
 use SapientPro\ImageComparator\ImageComparator;
 
 $image1 = 'https://github.com/sapientpro/image-comparator/blob/feature/phasher-implementation/tests/images/ebay-image.png?raw=true';
-$image2 = 'https://github.com/sapientpro/image-comparator/blob/feature/phasher-implementation/tests/images/amazon-image.png?raw=true'
+$image2 = 'https://github.com/sapientpro/image-comparator/blob/feature/phasher-implementation/tests/images/amazon-image.png?raw=true';
 
 $imageComparator = new ImageComparator();
 $similarity = $imageComparator->compare($image1, $image2); //default hashing without rotation
@@ -88,7 +88,7 @@ Let's compare different images:
 use SapientPro\ImageComparator\ImageComparator;
 
 $image1 = 'https://github.com/sapientpro/image-comparator/blob/feature/phasher-implementation/tests/images/ebay-image2.png?raw=true';
-$image2 = 'https://github.com/sapientpro/image-comparator/blob/feature/phasher-implementation/tests/images/amazon-image2.png?raw=true'
+$image2 = 'https://github.com/sapientpro/image-comparator/blob/feature/phasher-implementation/tests/images/amazon-image2.png?raw=true';
 
 $imageComparator = new ImageComparator();
 $similarity = $imageComparator->compare($image1, $image2); //default hashing without rotation
@@ -114,7 +114,7 @@ You can also use `detect()` method which will rotate the compared image and retu
 use SapientPro\ImageComparator\ImageComparator;
 
 $image1 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1.jpg';
-$image2 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1-copyrighted.jpg'
+$image2 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1-copyrighted.jpg';
 
 $imageComparator = new ImageComparator();
 $similarity = $imageComparator->detect($image1, $image2);
@@ -129,8 +129,8 @@ The behaviour is the same as in `compare()` and `detect()` methods.
 use SapientPro\ImageComparator\ImageComparator;
 
 $image1 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1.jpg';
-$image2 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1-copyrighted.jpg'
-$image3 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest.jpg'
+$image2 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1-copyrighted.jpg';
+$image3 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest.jpg';
 
 $imageComparator = new ImageComparator();
 $similarity = $imageComparator->compareArray(
@@ -149,7 +149,7 @@ and pass it to `compare()`, `compareArray()`, `detect()`, `detectArray` and `has
 use SapientPro\ImageComparator\ImageComparator;
 
 $image1 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1.jpg';
-$image2 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1-copyrighted.jpg'
+$image2 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1-copyrighted.jpg';
 
 $imageComparator = new ImageComparator();
 
@@ -167,7 +167,7 @@ If needed, you can convert the resulting array from `hashImage()` to a binary st
 use SapientPro\ImageComparator\ImageComparator;
 
 $image1 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1.jpg';
-$image2 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1-copyrighted.jpg'
+$image2 = 'https://raw.githubusercontent.com/sapientpro/phasher/feature/phasher-implementation/tests/images/forest1-copyrighted.jpg';
 
 $imageComparator = new ImageComparator();
 
